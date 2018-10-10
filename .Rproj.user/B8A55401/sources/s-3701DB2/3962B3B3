@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1539122181690.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3962B3B3",
+    "lastKnownWriteTime" : 1539179767,
+    "last_content_update" : 1539179774395,
+    "path" : "~/Repository/DataMining/HomeWork1/mahalanobisDistance.R",
+    "project_path" : "mahalanobisDistance.R",
+    "properties" : {
+        "cursorPosition" : "14,1",
+        "scrollLine" : "0",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

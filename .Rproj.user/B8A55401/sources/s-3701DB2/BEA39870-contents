@@ -1,0 +1,51 @@
+load(file="/Users/aleksandrmadisson/Repository/DataMining/kNN_data1.Rdata")
+#create vectors -- these will be our columns
+# a <- c(64,580,29)
+# b <- c(66,670,33)
+# c <- c(68,590,37)
+# d <- c(59,660,46)
+# e <- c(73,600,55)
+
+a <- c(64,66,68,69,73)
+b <- c(580,570,590,660,600)
+c <- c(29,33,37,46,55)
+
+
+
+# e <- c(3,5,5,5,10,8)
+# d <- c(10,20,30,40,50,55)
+# e <- c(7,8,9,4,6,10)
+
+
+#create matrix from vectors
+M <- cbind(a,b,c)
+k <- ncol(M) #number of variables
+n <- nrow(M) #number of subjects
+n2 <- nrow(x)
+
+#create means for each column
+listTest = c(mean(a),mean(b),mean(c))
+M_mean3 <- matrix(data=1, nrow=n2) %*% colMeans(x)
+M_mean2 <- matrix(data=1, nrow=n) %*% listTest
+M_mean <- matrix(data=1, nrow=n) %*% cbind(mean(a),mean(b),mean(c)) 
+
+#creates a difference matrix
+D <- M - M_mean
+D2 <- x - M_mean3
+
+#creates the covariance matrix
+C <- (n-1)^-1 * t(D) %*% D #sample covariance [matches cov()]
+C2 <- (n2-1)^-1 * t(D2) %*% D2
+#C <- (n)^-1 * t(D) %*% D #population covariance
+
+
+
+#pulls out the variances from the covariance matrix
+#Cvar_vector <- diag(C)^(-1/2)
+
+#constructs the correlation matrix
+#diag(var_vector) %*% C %*% diag(var_vector)
+
+#uses R's built-in functions
+#cov(M)
+cor(M)
