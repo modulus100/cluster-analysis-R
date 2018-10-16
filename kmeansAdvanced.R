@@ -9,7 +9,7 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
   source("computeNewCentroids.R")
   
   # max number of iterations
-  limit <- 10
+  limit <- 40
   cnt <- 0
   numSamples <- dim(dataset)[1] # num_instance
   dataDimension <- dim(dataset)[2] # num_features
@@ -32,32 +32,32 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
       sample <- dataset[indexSamples,][1:lastElementPos]
       
       while(indexCentroids < k + 1) {
-        cenctroid <- centroids[indexCentroids,][1:lastElementPos]
+        centroid <- centroids[indexCentroids,][1:lastElementPos]
         
         switch(distanceMethod,
           mahal = {
-            distanceVector[indexCentroids] <- mahalanobisDistance(cenctroid, sample, dataset[,-dataDimension])
+            distanceVector[indexCentroids] <- mahalanobisDistance(centroid, sample, dataset[,-dataDimension])
           },
           minkovski = {
             p <- 3
-            distanceVector[indexCentroids] <- minkovskiDistance(cenctroid, sample, p)
+            distanceVector[indexCentroids] <- minkovskiDistance(centroid, sample, p)
           },
           canderra = {
-            distanceVector[indexCentroids] <- canderraDistance(cenctroid, sample)
+            distanceVector[indexCentroids] <- canderraDistance(centroid, sample)
           },
           {
             # default
-            distanceVector[indexCentroids] <- canderraDistance(cenctroid, sample)
+            distanceVector[indexCentroids] <- canderraDistance(centroid, sample)
           })
         
         indexCentroids <- indexCentroids + 1
       }
       
       dataset[indexSamples,][dataDimension] <- closestClusterNumber(distanceVector)
-      centroids <- computeNewCentroids(dataset, k)
       indexSamples <- indexSamples + 1
     }
     
+    centroids <- computeNewCentroids(dataset, k)
     cnt <- cnt + 1
   }
   # return updated dataset
