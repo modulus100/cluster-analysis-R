@@ -3,7 +3,7 @@ canderraDistance <- function(v1, v2) {
   sum <- 0
   
   for (i in 1:length(v1)) {
-    tempVal <- (abs(v1[i] - v2[i])) / (abs(v1[i]) - abs(v2[i]))
+    tempVal <- (abs(v1[i] - v2[i])) / (abs(v1[i]) + abs(v2[i]))
     sum <- sum + tempVal
   }
   #return sum
