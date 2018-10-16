@@ -16,7 +16,7 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
   
   # random centroids selection
   # https://stackoverflow.com/questions/7806702/how-do-i-select-a-sample-of-rows-at-random-with-repetition-from-a-matrix-in-r
-  centroids <- dataset[sample(numSamples,size=dataDimension,replace=FALSE),]
+  centroids <- dataset[sample(numSamples,size=k,replace=FALSE),]
   # last element shows a cluster number
   lastElementPos <- dataDimension - 1
   # shows previous state cluster
