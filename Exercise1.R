@@ -9,6 +9,7 @@ source("minkovskiDistance.R")
 source("canderraDistance.R")
 source("kmeansAdvanced.R")
 source("kNNClassificationAdvanced.R")
+source("fetchClassificator.R")
 
 # distances
 # x - generated matrix
@@ -26,5 +27,6 @@ k <- 3
 # https://www.youtube.com/watch?v=4HKqjENq9OU
 k <- 3
 
-classificator <- kNNClassificationAdvanced(x, x[100,], k, distanceMethod)
+nearestVectors <- kNNClassificationAdvanced(x, x[100,], k, distanceMethod)
+classificator <- fetchClassificator(nearestVectors, k)
 print(classificator)
