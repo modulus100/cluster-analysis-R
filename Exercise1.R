@@ -26,7 +26,7 @@ k <- 3
 # kNN classification
 # https://www.youtube.com/watch?v=4HKqjENq9OU
 k <- 3
-
 nearestVectors <- kNNClassificationAdvanced(x, x[100,], k, distanceMethod)
+# k - classification number
 classificator <- fetchClassificator(nearestVectors, k)
-print(classificator)
+
