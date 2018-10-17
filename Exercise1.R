@@ -1,5 +1,5 @@
 load(file="/Users/aleksandrmadisson/Repository/DataMining/kNN_data1.Rdata")
-#dependecies
+# dependecies
 #library(HSAUR)
 #library(cluster)
 #library(mvtnorm)
@@ -20,11 +20,11 @@ source("kNNClassificationAdvanced.R")
 # default is minkovski distance
 distanceMethod <- "minkovski"
 k <- 3
-updatedDataset <- kmeansAdvanced(x, k)
+# updatedDataset <- kmeansAdvanced(x, k, distanceMethod)
 
 # kNN classification
 # https://www.youtube.com/watch?v=4HKqjENq9OU
 k <- 3
 
-classificator <- kNNClassificationAdvanced(dataset, dataset[100,], k)
-
+classificator <- kNNClassificationAdvanced(x, x[100,], k, distanceMethod)
+print(classificator)

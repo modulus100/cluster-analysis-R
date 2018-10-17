@@ -11,8 +11,8 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
   # max number of iterations
   limit <- 40
   cnt <- 0
-  numSamples <- dim(dataset)[1] # num_instance
-  dataDimension <- dim(dataset)[2] # num_features
+  numSamples <- dim(dataset)[1]
+  dataDimension <- dim(dataset)[2]
   
   # random centroids selection
   # https://stackoverflow.com/questions/7806702/how-do-i-select-a-sample-of-rows-at-random-with-repetition-from-a-matrix-in-r

@@ -37,6 +37,6 @@ computeNewCentroids <- function(dataset, k) {
     
     cnt <- cnt + 1
   }
-  
+  # return updated dataset
   dataset
 }
