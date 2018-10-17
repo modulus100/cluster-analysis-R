@@ -30,7 +30,7 @@ computeNewCentroids <- function(dataset, k) {
     
     # calculate mean value for each row of filtered row
     while(indexDimension < dataDimension) {
-      # means, last columns is ignored
+      # means, last column is ignored
       newCentroids[cnt,][indexDimension] <- sumVector[indexDimension] / dataCount
       indexDimension <- indexDimension + 1
     }
