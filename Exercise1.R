@@ -30,7 +30,7 @@ distanceMethod <- "minkovski"
 
 kmeansData <- kmeansAdvanced(x, k, distanceMethod)
 # plotKmeansData(kmeansData)
-# silhouette ration
+# silhouette ratio
 ratio <- silhouetteRatio(x, k, distanceMethod)
 
 # ex 3
