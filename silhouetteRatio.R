@@ -62,8 +62,6 @@ silhouetteRatio <- function(dataset, k, distanceMethod) {
   print(meanVector[2: k])
 
   minAverageDistance <- findMinAverageDistance(meanVector[2: k])
-  #minIndex <- which.min(meanVector[2: dataDimension - 1])
-  #minAverageDistance <- meanVector[2: dataDimension - 1][minIndex]
   silhouette <- 1 - (meanVector[1] / minAverageDistance)
   silhouette
 }
