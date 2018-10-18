@@ -42,3 +42,17 @@ classificator <- fetchClassificator(nearestVectors, k)
 
 ### kMeans example using Minkovski distance, centroids are solid triangles
 ![alt text](https://github.com/modulus100/cluster-analysis-R/blob/master/Images/clusters.png "kMeans")
+
+###Functions overview
+
+**computeNewCentroids** - recalculates and returns new centroids whithin each iteration during 
+ the kmeans computing
+ 
+**covarMatrix** - computes a covariation matrix
+ 
+**plotKmeansData** - plots the kmeans data
+
+**kNNClassificationAdvanced** - return kNN k vectors or points
+
+**fetchClassificator** - return a classificator according to kNNClassificationAdvanced vectors 
+ 
