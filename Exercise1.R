@@ -11,6 +11,7 @@ source("kmeansAdvanced.R")
 source("kNNClassificationAdvanced.R")
 source("fetchClassificator.R")
 source("plotKmeansData.R")
+source("silhouetteRatio.R")
 
 # ex 1
 # distances
@@ -28,7 +29,9 @@ distanceMethod <- "minkovski"
 #distanceMethod <- "canderra"
 
 kmeansData <- kmeansAdvanced(x, k, distanceMethod)
-plotKmeansData(kmeansData)
+# plotKmeansData(kmeansData)
+# silhouette ration
+ratio <- silhouetteRatio(x, k, distanceMethod)
 
 # ex 3
 # kNN classification
