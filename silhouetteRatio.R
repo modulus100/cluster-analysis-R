@@ -1,4 +1,5 @@
 silhouetteRatio <- function(dataset, k, distanceMethod) {
+  # https://www.coursera.org/lecture/cluster-analysis/6-2-clustering-evaluation-measuring-clustering-quality-RJJfM
   source("mahalanobisDistance.R")
   source("minkovskiDistance.R")
   source("canderraDistance.R")

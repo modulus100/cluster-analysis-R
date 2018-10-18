@@ -33,6 +33,12 @@ kmeansData <- kmeansAdvanced(x, k, distanceMethod)
 plotKmeansData(kmeansData)
 ```
 
+**silhoutte ratio x - matrix with the data, k - number of clusters, 
+distance method - name of a distance method ( Minkovski is default)**
+```
+ratio <- silhouetteRatio(x, k, distanceMethod)
+```
+
 **kNN classification, x - matrix with the data, kmeansData$dataset should be used, 
 x[100,] - vector or a point, 
 k - number of nearest points, distance method - name of a distance method ( Minkovski is default)**
@@ -57,6 +63,8 @@ classificator <- fetchClassificator(nearestVectors, k)
 
 **fetchClassificator** - returns a classificator according to kNNClassificationAdvanced vectors
 
+**silhouetteRatio** - silhouetteRatio
+
 ### Used information
 
 https://www.youtube.com/watch?v=4HKqjENq9OU  
@@ -66,5 +74,6 @@ https://nlp.stanford.edu/IR-book/html/htmledition/k-means-1.html
 https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/  
 https://habr.com/post/199060/  
 https://habr.com/post/101338/  
+https://www.coursera.org/lecture/cluster-analysis/6-2-clustering-evaluation-measuring-clustering-quality-RJJfM  
 
 Contact: aleksandr.madisson@linnworks.com
