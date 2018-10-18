@@ -1,5 +1,6 @@
 # Cluster analysis with R
 
+Original repository https://github.com/modulus100/cluster-analysis-R/  
 This project is intended for learning a fundamentals of machine learning and data mining
 algorithms. All the code is written using a pure R programming language. 
 The project contains an implementation of the following algorithms.
