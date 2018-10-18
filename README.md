@@ -66,4 +66,4 @@ https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/
 https://habr.com/post/199060/  
 https://habr.com/post/101338/  
 
-Contact: Aleksandr Madisson - aleksandr.madisson@linnworks.com
+Contact: aleksandr.madisson@linnworks.com
