@@ -58,9 +58,9 @@ classificator <- fetchClassificator(nearestVectors, k)
 
 ### Used information
 
-https://www.youtube.com/watch?v=4HKqjENq9OU
-https://stackoverflow.com/questions/38173136/euclidean-distance-for-three-or-more-vectors
-https://stackoverflow.com/questions/30195806/k-means-stopping-criteria-in-matlab
-https://nlp.stanford.edu/IR-book/html/htmledition/k-means-1.html
-https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/
+https://www.youtube.com/watch?v=4HKqjENq9OU  
+https://stackoverflow.com/questions/38173136/euclidean-distance-for-three-or-more-vectors  
+https://stackoverflow.com/questions/30195806/k-means-stopping-criteria-in-matlab  
+https://nlp.stanford.edu/IR-book/html/htmledition/k-means-1.html  
+https://kevinzakka.github.io/2016/07/13/k-nearest-neighbor/  
  
