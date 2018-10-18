@@ -52,7 +52,7 @@ classificator <- fetchClassificator(nearestVectors, k)
  
 **plotKmeansData** - plots the kmeans data
 
-**kNNClassificationAdvanced** - return kNN k vectors or points
+**kNNClassificationAdvanced** - returns kNN k vectors
 
-**fetchClassificator** - return a classificator according to kNNClassificationAdvanced vectors 
+**fetchClassificator** - returns a classificator according to kNNClassificationAdvanced vectors 
  
