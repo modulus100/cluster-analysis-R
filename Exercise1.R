@@ -29,7 +29,7 @@ distanceMethod <- "minkovski"
 #distanceMethod <- "canderra"
 
 kmeansData <- kmeansAdvanced(x, k, distanceMethod)
-# plotKmeansData(kmeansData)
+plotKmeansData(kmeansData)
 # silhouette ratio
 ratio <- silhouetteRatio(x, k, distanceMethod)
 
