@@ -5,7 +5,7 @@ covarMatrix <- function(rawMatrix) {
   initValues <- 1
   xMeans <- matrix(data=initValues, nrow=n) %*% colMeans(rawMatrix)
   #creates a difference matrix
-  diffMatrix <- x - xMeans
+  diffMatrix <- rawMatrix - xMeans
   #creates the covariance matrix
   #t - transpose matrix
   C <- (n-1)^-1 * t(diffMatrix) %*% diffMatrix

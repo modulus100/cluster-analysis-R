@@ -9,7 +9,7 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
   source("computeNewCentroids.R")
   
   # max number of iterations
-  limit <- 40
+  limit <- 100
   cnt <- 0
   numSamples <- dim(dataset)[1]
   dataDimension <- dim(dataset)[2]
@@ -26,7 +26,7 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
     tempClusterSet <- dataset[,dataDimension]
     indexSamples <- 1
 
-    while(indexSamples < numSamples + 1) {
+    while(indexSamples < 8 + 1) { #numSamples
       indexCentroids <- 1
       distanceVector <- numeric(k)
       sample <- dataset[indexSamples,][1:lastElementPos]
@@ -61,5 +61,5 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
     cnt <- cnt + 1
   }
   # return updated dataset
-  dataset
+  list("dataset" = dataset, "centoids" = centroids)
 }
