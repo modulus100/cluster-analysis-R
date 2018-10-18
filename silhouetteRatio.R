@@ -60,8 +60,6 @@ silhouetteRatio <- function(dataset, k, distanceMethod) {
   }
   
   # first goes for the first cluster
-  print(meanVector[2: k])
-
   minAverageDistance <- findMinAverageDistance(meanVector[2: k])
   silhouette <- 1 - (meanVector[1] / minAverageDistance)
   silhouette
