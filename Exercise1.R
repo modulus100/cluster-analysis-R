@@ -14,11 +14,10 @@ source("plotKmeansData.R")
 
 # ex 1
 # distances
-# x - generated matrix
 dimension <- dim(x)[2]
 mahalDist <- mahalanobisDistance(x[2,][1:2],x[4,][1:2], x[,-dimension])
-# minkovskiDist <- minkovskiDistance(x[2,],x[4,], 5)
-# canderraDist <- canderraDistance(x[2,],x[4,])
+minkovskiDist <- minkovskiDistance(x[2,],x[4,], 5)
+canderraDist <- canderraDistance(x[2,],x[4,])
 
 # ex 2
 # kmeans
@@ -35,7 +34,7 @@ plotKmeansData(kmeansData)
 # kNN classification
 # https://www.youtube.com/watch?v=4HKqjENq9OU
 k <- 3
-# nearestVectors <- kNNClassificationAdvanced(x, x[100,], k, distanceMethod)
+nearestVectors <- kNNClassificationAdvanced(x, x[100,], k, distanceMethod)
 # k - classification number
-# classificator <- fetchClassificator(nearestVectors, k)
+classificator <- fetchClassificator(nearestVectors, k)
 
