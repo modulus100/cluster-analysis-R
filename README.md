@@ -18,23 +18,23 @@ Please specify your path for **kNN_data1.RData** in
 load(file="/yourPath/kNN_data1.Rdata")
 ```
 
-Distances
+**Distances**
 ```
 mahalDist <- mahalanobisDistance(x[2,][1:2],x[4,][1:2], x[,-dimension])
 minkovskiDist <- minkovskiDistance(x[2,],x[4,], 5)
 canderraDist <- canderraDistance(x[2,],x[4,])
 ```
 
-Kmeans, x - matrix with the data, k - number of clusters, 
-distance method - name of a distance method ( Minkovski is default)
+**Kmeans, x - matrix with the data, k - number of clusters, 
+distance method - name of a distance method ( Minkovski is default)**
 ```
 kmeansData <- kmeansAdvanced(x, k, distanceMethod)
 plotKmeansData(kmeansData)
 ```
 
-kNN classification, x - matrix with the data, kmeansData$dataset should be used, 
+**kNN classification, x - matrix with the data, kmeansData$dataset should be used, 
 x[100,] - vector or a point, 
-k - number of nearest points, distance method - name of a distance method ( Minkovski is default)
+k - number of nearest points, distance method - name of a distance method ( Minkovski is default)**
 ```
 nearestVectors <- kNNClassificationAdvanced(x, x[100,], k, distanceMethod)
 classificator <- fetchClassificator(nearestVectors, k)
