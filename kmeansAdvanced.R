@@ -13,6 +13,7 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
   cnt <- 0
   numSamples <- dim(dataset)[1]
   dataDimension <- dim(dataset)[2]
+  classificationMatrix = matrix(0, nrow = numSamples, ncol = 1)
   
   # random centroids selection
   # https://stackoverflow.com/questions/7806702/how-do-i-select-a-sample-of-rows-at-random-with-repetition-from-a-matrix-in-r
@@ -26,7 +27,7 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
     tempClusterSet <- dataset[,dataDimension]
     indexSamples <- 1
 
-    while(indexSamples < 8 + 1) { #numSamples
+    while(indexSamples < numSamples  + 1) { #numSamples
       indexCentroids <- 1
       distanceVector <- numeric(k)
       sample <- dataset[indexSamples,][1:lastElementPos]
@@ -54,6 +55,7 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
       }
       
       dataset[indexSamples,][dataDimension] <- closestClusterNumber(distanceVector)
+      classificationMatrix[indexSamples] <- closestClusterNumber(distanceVector)
       indexSamples <- indexSamples + 1
     }
     
@@ -61,5 +63,5 @@ kmeansAdvanced <- function(dataset, k, distanceMethod="minkovski") {
     cnt <- cnt + 1
   }
   # return updated dataset
-  list("dataset" = dataset, "centoids" = centroids)
+  list("dataset" = dataset, "centoids" = centroids, "classificators" = classificationMatrix)
 }
