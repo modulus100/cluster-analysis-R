@@ -32,7 +32,7 @@ kmeansData <- kmeansAdvanced(x, k, distanceMethod)
 #plotKmeansData(kmeansData)
 # silhouette ratio
 ratio <- silhouetteRatio(x, k, distanceMethod)
-print(ratio)
+#print(ratio)
 
 # ex 3
 # kNN classification
@@ -130,8 +130,31 @@ fihserScore <- function(dataset, featureIndex) {
   firstSum / secondSum
 }
 
+# for this exampel we've given two featues only
 firstFeatureFisherScore = fihserScore(x, 1)
 secondFeatureFisherScore = fihserScore(x, 2)
 
+print("Fisher score for first feature")
 print(firstFeatureFisherScore)
+cat("\n")
+print("Fisher score for second feature")
 print(secondFeatureFisherScore)
+cat("\n")
+
+#Todo use better quality better quality function
+possibleKvalues <- c(2:3)
+
+for (k in possibleKvalues) {
+  distanceMethod <- "minkovski"
+  #distanceMethod <- "mahal"
+  #distanceMethod <- "canderra"
+  
+  kmeansData <- kmeansAdvanced(x, k, distanceMethod)
+  #plotKmeansData(kmeansData)
+  # silhouette ratio
+  ratio <- silhouetteRatio(x, k, distanceMethod)
+  
+  print("silhouette ratio")
+  print(ratio)
+  cat("\n")
+}
