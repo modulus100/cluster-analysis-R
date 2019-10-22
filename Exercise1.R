@@ -141,7 +141,8 @@ print("Fisher score for second feature")
 print(secondFeatureFisherScore)
 cat("\n")
 
-#Todo use better quality better quality function
+# Todo try different quality algorithms
+# redesign kMeans fucntion to be able to use many large k range
 possibleKvalues <- c(2:3)
 
 for (k in possibleKvalues) {
